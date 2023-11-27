@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private class MyOnOkClickListener implements TextConvert.OnOkListener{
 
         @Override
-        public void forTextChange(String text, TextConvert textConvert) {
+        public void forTextChange(String text, @NonNull TextConvert textConvert) {
             textConvert.dismiss();
             edtText.setText(text);
         }
